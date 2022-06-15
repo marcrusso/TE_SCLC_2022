@@ -603,7 +603,8 @@ ggplot(lola_up_LTR_epigenome, aes())+
 library(clusterProfiler)
 library(DESeq2)
 library(tidyverse)
-
+#####################################################
+####in Shell
 ## Use closest bedtools to get the genes closest to downregulated TEs
 # Sort the bed file of downregulated TEs
 sort -k1,1 -k2,2n bed_intergenic_down.bed > sorted_bed_intergenic_down.bed
@@ -611,7 +612,7 @@ sort -k1,1 -k2,2n bed_intergenic_down.bed > sorted_bed_intergenic_down.bed
 sort -k1,1 -k2,2n bed_genes.bed > sorted_bed_genes.bed
 #closest bedtools line command
 bedtools closest -s -iu -D a -t first -a bed_intergenic_down.bed -b sorted_bed_genes.bed > output_down.bed
-
+###################################################
 # Filter genes downstream up to 20kb from TEs as TERM2GENE
 DOWN_intergenic_genes.Select <- output_down %>% mutate(X13 = abs(X13)) %>% filter(X13 < 20000) %>%
   select(c(4,10))
