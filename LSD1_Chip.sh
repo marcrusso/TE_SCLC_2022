@@ -10,3 +10,17 @@ computeMatrix scale-regions -S  $SAMPLELIST_LSD -R $Sample_coll  -o LSD1_SCLC1.m
 computeMatrix scale-regions -S  $SAMPLELIST_LSD -R $Sample_coll  -o LSD1_SCLC2.mtx -bs 5 -b 50 -a 50 -m 500 --smartLabels -p max --missingDataAsZero --skipZeros
 plotHeatmap -m LSD1_SCLC1.mtx -out LSD1_SCLC1.pdf --perGroup --plotType se
 plotHeatmap -m LSD1_SCLC2.mtx -out LSD1_SCLC2.pdf --perGroup --plotType se
+
+
+SAMPLELIST_LSD=$(ls *ratio.bw)
+Sample_coll=LTR_LSD1.bed #hg19 coordinates of downregulated ERVs
+computeMatrix scale-regions -S  $SAMPLELIST_LSD -R $Sample_coll  -o LSD1_SCLC1.mtx -bs 5 -b 5000 -a 5000 -m 1000 --smartLabels -p max --missingDataAsZero --skipZeros
+computeMatrix scale-regions -S  $SAMPLELIST_LSD -R $Sample_coll  -o LSD1_SCLC2.mtx -bs 5 -b 50 -a 50 -m 500 --smartLabels -p max --missingDataAsZero --skipZeros
+plotHeatmap -m LSD1_SCLC1.mtx -out LSD1_SCLC1.pdf --perGroup --plotType se
+plotHeatmap -m LSD1_SCLC2.mtx -out LSD1_SCLC2.pdf --perGroup --plotType se
+
+H526-Ctrl_H3K4
+SAMPLELIST_LSD=$(ls *Ctrl_H3K4*.bw)
+Sample_coll=LTR_LSD1.bed #hg19 coordinates of downregulated ERVs
+computeMatrix scale-regions -S  $SAMPLELIST_LSD -R $Sample_coll  -o LSD1_SCLC1.mtx -bs 5 -b 5000 -a 5000 -m 1000 --smartLabels -p max --missingDataAsZero --skipZeros
+plotHeatmap -m LSD1_SCLC1.mtx -out H3K4_SCLC1.pdf --perGroup --plotType se
