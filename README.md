@@ -1,4 +1,13 @@
-# TE_SCLC_2022
- Code for analysis performed in:
-Russo, M., Morelli, S., & Capranico, G. (2023). Expression of down-regulated ERV LTR elements associates with immune activation in human small-cell lung cancers. Mobile DNA, 14(1), 2. https://doi.org/10.1186/s13100-023-00290-w
+# Expression of down-regulated ERV LTR elements associates with immune activation in human small-cell lung cancers
 
+## Publication
+
+- **Title:** Expression of down-regulated ERV LTR elements associates with immune activation in human small-cell lung cancers
+- **Authors:** Marco Russo, Simone Morelli, and Giovanni Capranico
+- **Journal:** Mobile DNA, 14(1), article 2 (2023)
+- **DOI:** [10.1186/s13100-023-00290-w](https://doi.org/10.1186/s13100-023-00290-w)
+- **Article:** [Read the article](https://doi.org/10.1186/s13100-023-00290-w)
+
+## Repository contents
+
+Code for analysis performed in this publication.
